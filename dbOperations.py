@@ -40,6 +40,6 @@ def checkIfRunning(sqlite3Con: sqlite3):
         results = executor.fetchall()
         i = 0
         for r in results:
-                i = i+1
+                i = r[0]
         return i
 

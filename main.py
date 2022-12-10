@@ -42,9 +42,8 @@ for file_path, file_size in files_with_size:
     db.insertRow(con, file_path)
 
 i = db.checkIfRunning(con)
-
-if i >= 0:
-    print("i>0 - Invio email")
+print(i)
+if i == 0:
     print(i)
     sendEmail.send_email()
     i = 0
